@@ -11,8 +11,8 @@
 # ----------------------------------------------------------------------------
 # 1. SETUP & DATA LOADING
 # ----------------------------------------------------------------------------
-dir = "/Users/thisisme710/Desktop/Research/Paramecium logistic growth/Fall 2025/Data Sheets"
-cd(dir)
+#dir = "/Users/thisisme710/Desktop/Research/Paramecium logistic growth/Fall 2025/Data Sheets"
+#cd(dir)
 
 using CSV, DataFrames, GLM, StatsPlots, Plots, Statistics, Measures
 
