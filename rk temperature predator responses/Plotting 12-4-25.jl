@@ -12,7 +12,9 @@
 # 1. SETUP & DATA LOADING
 # ----------------------------------------------------------------------------
 #dir = "/Users/thisisme710/Desktop/Research/Paramecium logistic growth/Fall 2025/Data Sheets"
-#cd(dir)
+
+dir = "/Users/93652672/Documents/GitHub/Paramecium-temperature-predator-ORCC-/rk temperature predator responses"
+cd(dir)
 
 using CSV, DataFrames, GLM, StatsPlots, Plots, Statistics, Measures
 
