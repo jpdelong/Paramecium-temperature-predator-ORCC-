@@ -39,8 +39,8 @@ end
 
 # Global Plot Settings
 default(titlefont=10, guidefont=9, tickfont=8, legendfont=7, margin=3mm)
-cop_palette = [:yellow, :green]
-temp_palette = [:blue, :red]
+cop_palette = [:yellow, :brown]
+temp_palette = [:blue, :purple]
 
 # ----------------------------------------------------------------------------
 # FIGURE SET 1: MAIN EFFECTS (4 panels - 2×2 grid)
@@ -55,7 +55,7 @@ function make_effect_plot(y_sym, x_sym, group_sym, pal, title_str, y_lab)
     
     @df df3_home_labeled boxplot(cols(group_sym), cols(y_sym),
         group=cols(group_sym), palette=pal, fillalpha=0.75, linewidth=1.5,
-        title="$title_str\np=$(round(pval, digits=3))", 
+        title="$title_str\np=$(round(pval, digits=2))", 
         ylabel=y_lab, legend=false)
 end
 
