@@ -1,0 +1,33 @@
+depvar,Name,Coef.,Std. Error,z,Pr(>|z|)
+r,(Intercept),-0.27,0.43,-0.62,0.536
+r,env_temp,0.05,0.02,2.44,0.015
+r,copepods,0.34,0.63,0.53,0.595
+r,env_temp & copepods,-0.02,0.03,-0.74,0.460
+k,(Intercept),-7967.91,8835.24,-0.90,0.367
+k,env_temp,499.46,380.91,1.31,0.190
+k,copepods,-5286.35,12876.19,-0.41,0.681
+k,env_temp & copepods,415.05,560.69,0.74,0.459
+cell volume,(Intercept),-26539504.35,2340119.42,-11.34,0.000
+cell volume,env_temp,1349640.94,101457.69,13.30,0.000
+cell volume,copepods,36414792.02,2527532.99,14.41,0.000
+cell volume,env_temp & copepods,-1507084.45,109779.07,-13.73,0.000
+speed,(Intercept),1393.17,73.89,18.85,0.000
+speed,env_temp,-45.24,3.19,-14.20,0.000
+speed,copepods,-882.17,95.28,-9.26,0.000
+speed,env_temp & copepods,36.87,4.14,8.90,0.000
+aspect ratio,(Intercept),2.49,0.21,11.82,0.000
+aspect ratio,env_temp,-0.01,0.01,-1.27,0.204
+aspect ratio,copepods,0.55,0.30,1.84,0.066
+aspect ratio,env_temp & copepods,-0.02,0.01,-1.33,0.185
+sd turning,(Intercept),0.07,0.02,3.53,0.000
+sd turning,env_temp,0.02,0.00,19.36,0.000
+sd turning,copepods,0.15,0.03,5.07,0.000
+sd turning,env_temp & copepods,-0.01,0.00,-4.86,0.000
+major axis,(Intercept),119.83,35.65,3.36,0.001
+major axis,env_temp,2.27,1.54,1.48,0.140
+major axis,copepods,152.41,51.96,2.93,0.003
+major axis,env_temp & copepods,-5.33,2.26,-2.36,0.018
+minor axis,(Intercept),49.14,9.33,5.27,0.000
+minor axis,env_temp,1.22,0.40,3.03,0.002
+minor axis,copepods,40.89,13.60,3.01,0.003
+minor axis,env_temp & copepods,-1.43,0.59,-2.42,0.016

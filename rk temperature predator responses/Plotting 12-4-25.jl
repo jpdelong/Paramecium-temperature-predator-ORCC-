@@ -70,6 +70,9 @@ p1_4 = make_effect_plot(:mean_k, :env_temp, :temp_label, temp_palette, "K vs Tem
 
 fig_set_1 = plot(p1_1, p1_2, p1_3, p1_4, layout=(2,2), size=(800, 800))
 
+
+
+
 # ----------------------------------------------------------------------------
 # FIGURE SET 2: LOGISTIC GROWTH CURVES (4 panels - 2×2 grid)
 # ----------------------------------------------------------------------------
