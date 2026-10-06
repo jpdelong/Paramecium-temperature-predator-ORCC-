@@ -2,7 +2,7 @@
 # PARAMECIUM LOGISTIC GROWTH - REORGANIZED ANALYSIS SCRIPT
 # ============================================================================
 
-
+# Kristi is learning Github
 using CSV
 using DataFrames
 using GLM
