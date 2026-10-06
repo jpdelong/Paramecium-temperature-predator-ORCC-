@@ -2,6 +2,7 @@
 # PARAMECIUM LOGISTIC GROWTH - REORGANIZED ANALYSIS SCRIPT
 # ============================================================================
 
+
 using CSV
 using DataFrames
 using GLM
