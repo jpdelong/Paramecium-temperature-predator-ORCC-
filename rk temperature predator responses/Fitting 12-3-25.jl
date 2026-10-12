@@ -8,8 +8,10 @@
 # ----------------------------------------------------------------------------
 # 1. SETUP: ENVIRONMENT & PACKAGES
 # ----------------------------------------------------------------------------
-dir = "/Users/thisisme710/Desktop/Research/Paramecium logistic growth/Fall 2025/Data Sheets"
+dir = "C:/Users/93652672/Documents/GitHub/Paramecium-temperature-predator-ORCC-/rk temperature predator responses/"
 cd(dir)
+pwd() # check your pathway
+readdir()
 
 using MCMCChains, Turing, DataFrames, CSV, Distributions, Random
 using Statistics
@@ -19,7 +21,7 @@ using StatsPlots
 
 Turing.setprogress!(false)
 
-trace_dir = "/Users/thisisme710/Desktop/Research/Paramecium logistic growth/Fall 2025/plots/Trace plots"
+trace_dir = "C:/Users/93652672/Documents/GitHub/Paramecium-temperature-predator-ORCC-/rk temperature predator responses/plots/Trace plots"
 
 isdir(trace_dir) || mkpath(trace_dir)   
 
@@ -52,23 +54,10 @@ pop_names = unique(names)
 # 4. BAYESIAN LOGISTIC GROWTH FITTING
 # ----------------------------------------------------------------------------
  
-
-
-
-
-
-
 @model function logistic_growth(times,density,starting_d) 
-    #r0 ~ truncated(Normal(1,20),0,15) # maximum growth rate
-    #r0 ~ truncated(Normal(1,10), lower = 0) # maximum growth rate
-    #k ~ truncated(Normal(60000,60000),0,6*maximum(density)) # carrying capacity
-    #k ~ truncated(Normal(20000,20000), lower =0) # carrying capacity
-    r0 ~ truncated(Normal(1,20),0, Inf)
-    k ~ truncated(Normal(60000,60000),0, Inf)
-σ ~ InverseGamma(2,3)
-
-
-
+    r0 ~ truncated(Normal(1,4),0,4) # maximum growth rate
+    k ~ truncated(Normal(10000,60000), 0.2*maximum(density), 3*maximum(density))
+    σ ~ InverseGamma(2,3)
 	for i in 1:length(times)
         density[i] ~ truncated(Normal(k./(1+((k-starting_d)./starting_d).*exp(-r0.*times[i]))),0,maximum(density))
 	end
@@ -91,7 +80,6 @@ for i = 1:num_studies
         model_logistic,
         NUTS(20000, 0.9),
         MCMCThreads(),
-
         20000,
         4
     )
