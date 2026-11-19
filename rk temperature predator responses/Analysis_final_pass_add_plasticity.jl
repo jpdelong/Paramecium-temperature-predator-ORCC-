@@ -95,7 +95,7 @@ current()
 for i in 1:size(loadings, 1)
     x = loadings[i, 1] * scale
     y = loadings[i, 2] * scale
-    plot!([0, x],[0, y],arrow=true,color=:black,label="")
+    plot!(s1,[0, x],[0, y],arrow=true,color=:black,label="")
 
     annotate!(x, y, string(subset_names[i]))
 end
@@ -441,8 +441,11 @@ diffs_mdl1 = lm(@formula(r_diffs ~ env_temp + copepods), df3_home)
 diffs_mdl1 = lm(@formula(k_diffs ~ env_temp * copepods), df3_home)
 diffs_mdl1 = lm(@formula(k_diffs ~ env_temp + copepods), df3_home)
 
-
+diffs_mdl1 = lm(@formula(r_diffs ~ pc1 * pc2), df3_home)
 diffs_mdl1 = lm(@formula(r_diffs ~ pc1 + pc2), df3_home)
+
+diffs_mdl1 = lm(@formula(k_diffs ~ pc1 * pc2), df3_home)
+diffs_mdl1 = lm(@formula(k_diffs ~ pc1 + pc2), df3_home)
 
 diffs_mdl1 = lm(@formula(r_diffs ~ env_temp + copepods + pc1), df3_home)
 diffs_mdl1 = lm(@formula(r_diffs ~ env_temp + pc1), df3_home)
